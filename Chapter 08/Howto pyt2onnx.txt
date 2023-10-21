@@ -1,0 +1,7 @@
+conda create --name pyt2onnx
+git clone https://github.com/ultralytics/YOLOv5
+cd YOLOv5
+pip install -r requirements.txt
+pip install onnx
+wget https://github.com/ultralytics/YOLOv5/releases/download/v6.1/YOLOv5s.pt
+python export.py --weights YOLOv5s.pt --include onnx
